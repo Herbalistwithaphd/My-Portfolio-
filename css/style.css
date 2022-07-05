@@ -27,7 +27,7 @@
     display: inline-block;
     font-size: 18px;
     color: #fff;
-    background:  rgb(63, 6, 6);
+    background:  rgb(93, 6, 6);
     padding: 13px 20px;
     margin: 0 10px;
     border: none;
@@ -59,31 +59,38 @@ p{
     margin: 10px o;
 }
 
-
 #navbar{
     background: rgb(66, 6, 6);
     color: #fff;
     overflow: auto;
+
 }
 
-#navbar a{
+
+ #navbar a{
     color: #fff;
 }
 
-#navbar h1{
+ #navbar h1{
     float: left;
     padding-top: 20px;
 }
 
-#navbar ul{
-    list-style: none;
-    float: right;
+#navbar h1 a:hover {
+    background: rgb(93, 6, 6);
+    color: #f7c08a;
 }
 
-#navbar ul li{
-    float: left;
+ #navbar ul{
+    list-style: none;
+}
+
+
+ #navbar ul li{
     padding: 20px;
     cursor: pointer;
+    display: inline-block;
+    align-items: left;
 }
 
 #navbar ul li a{
@@ -91,10 +98,16 @@ p{
     text-align: center;
 }
 
-a:hover, 
-a.current{
-    background: rgb(48, 9, 9);
-    color: #f79d44;
+li:hover{
+    background: rgb(93, 6, 6);
+    color: #f7c08a;
+}
+
+img{
+    border-radius: 50%;
+    justify-items: center;
+    height: 150px;
+    
 }
 
 #showcase{
@@ -124,17 +137,6 @@ svg{
     margin: 40px 10px;
 }
 
-#about-wrapper{
-    margin: 40px;
-   
-}
-
-#about-wrapper h2, h3 {
-    text-align: center;
-    align-items: center;
-    margin: 20px;
-    padding: 20;
-}
 
 #about-wrapper p{
     text-align: center;
@@ -145,6 +147,17 @@ svg{
     padding: 0 50px;
 }
 
+.h2{
+    background: rgb(66, 6, 6);
+    color: #fff;
+    padding: 20px;
+}
+
+.set{
+    background: rgb(66, 6, 6);
+    color: #fff;
+    padding: 20px;
+}
 .project h2{
     font-size: 18px;
     font-weight: bold;
@@ -195,6 +208,8 @@ svg{
     font-size: 16px;
     cursor: pointer;
     margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 .set{
@@ -202,6 +217,7 @@ svg{
     /* background-color: rgb(116, 3, 3); */
     color: black;
     padding: 20px;
+
 }
 
 /* About */
@@ -215,14 +231,98 @@ svg{
 }
 
 
+.hero-stack h2{
+    background: rgb(66, 6, 6);
+    color: #fff;
+    overflow: auto;   
+}
+
+.hero-stack ul{
+    list-style: none;
+}
+
+
+ .hero-stack ul li{
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.hero-stack ul li a{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-experience h2{
+    background: rgb(66, 6, 6);
+    color: #fff;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+.hero-experience h4{
+    text-align: center;
+}
+
+
+.hero-education h2{
+    background: rgb(66, 6, 6);
+    color: #fff;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+.hero-education h4{
+    text-align: center;
+}
+
+.project-heading{
+    padding-top: 40px;
+    text-align: center;
+}
+
+/* Contact */
+.contact-heading{
+    text-align: center;
+    padding-top: 60px;
+}
+
+input{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(66, 6, 6);
+    border-radius: 4px;
+}
+
+textarea{
+    width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid rgb(66, 6, 6);
+  border-radius: 4px;
+  background-color: #f7c08a;
+  /* resize: none */
+}
+
+label{
+    display: block;
+}
+
+.contact-container{
+    margin: 20px 70px;
+    padding: 20px;
+}
 
 /* Footer */
 #main-footer{
     text-align: center;
     background: rgb(66, 6, 6);
     color: white;
-    padding: 40px 20px;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 #main-footer svg{
@@ -233,15 +333,5 @@ svg{
 .footer-download{
     background: rgb(48, 9, 9);
     color: #f79d44;
-    margin: 20px;
-    padding: 5px;
 }
 
-h4{
-    text-align: center;
-}
-
-.stack{
-    display: flex;
-    align-items: center;
-}
