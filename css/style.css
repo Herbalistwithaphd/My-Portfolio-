@@ -47,12 +47,17 @@ html body{
 }
 
 a{
-    color: #333;
     text-decoration: none;
 }
 
-h1 h2 h3 {
+h1 h3 {
     padding-bottom: 20px;
+}
+
+h2{
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
 }
 
 p{
@@ -60,50 +65,48 @@ p{
 }
 
 #navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
     background: rgb(66, 6, 6);
     color: #fff;
-    overflow: auto;
-
+    overflow: hidden;
 }
 
+#navbar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
 
- #navbar a{
+#navbar ul li a{
+    padding: 12px;
+    margin: 0 8px;
+    color: #fff;
+    /* border: 1px solid #fff; */
+}
+
+#navbar h1 a{
     color: #fff;
 }
 
- #navbar h1{
-    float: left;
-    padding-top: 20px;
-}
 
 #navbar h1 a:hover {
     background: rgb(93, 6, 6);
     color: #f7c08a;
 }
 
- #navbar ul{
-    list-style: none;
-}
 
-
- #navbar ul li{
-    padding: 20px;
-    cursor: pointer;
-    display: inline-block;
-    align-items: left;
-}
-
-#navbar ul li a{
-    display: block;
-    text-align: center;
-}
-
-li:hover{
+li a:hover{
     background: rgb(93, 6, 6);
     color: #f7c08a;
 }
 
-img{
+#navbar ul li a.current{
+    color: #f38212;
+}
+
+.profile-img{
     border-radius: 50%;
     justify-items: center;
     height: 150px;
@@ -112,18 +115,18 @@ img{
 
 #showcase{
     background-image: url(../img/image.jpg.jpg);
-    height: 600px;
+    height: 90vh;
 }
 
 #showcase .showcase-content{
     color: #fff;
     text-align: center;
-    padding-top: 170px;
+    padding-top: 50px;
 }
 
 #showcase .showcase-content h1{
-    font-size: 42px;
-    line-height: 1.2em;
+    font-size: 32x;
+    line-height: 1.5em;
 }
 
 #showcase .showcase-content p{
@@ -134,13 +137,29 @@ img{
 
 svg{
     fill: rgb(83, 3, 3);
-    margin: 40px 10px;
+    margin: 0 10px;
 }
 
+.about{
+    position: relative;
+    animation: mymove 5s infinite3;
+    animation-timing-function: ease-in-out;
+}
 
-#about-wrapper p{
-    text-align: center;
-    margin: 20px 30px; 
+@keyframes mymove{
+    from{left: 0px;}
+    to{left: 300px;}
+}
+
+.about-h2 {
+    background: rgb(66, 6, 6);
+    border: 2px solid rgb(66, 6, 6);
+    border-radius: 5px;
+    color: white;
+    padding: 0.5rem;
+}
+.about p {
+    margin-bottom: 2rem;
 }
 
 .project{
@@ -158,7 +177,8 @@ svg{
     color: #fff;
     padding: 20px;
 }
-.project h2{
+
+#project h2{
     font-size: 18px;
     font-weight: bold;
     margin-top: 30px;
@@ -168,26 +188,34 @@ svg{
 
 .project-wrapper{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* align-items: center; */
 }
-
-.project h3{
+.projects {
+    /* border: 1px solid grey; */
+    margin-bottom: 16px;
+}
+.projects h3{
     font-size: 17px;
     margin: 10px 0;
+    text-align: center;
 }
 
 .projects p{
     font-size: 15px;
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 40px;
 }
 
 .projects img{
-    width: 600px;
+    width: 350px;
     height: 400px;
-    margin-top: 30px;
-    padding: 20px 50px;
+    left: 25%;
+    /* align-content: center; */
+    text-align: center;
+    /* margin-top: 30px; */
+    /* padding: 20px 50px; */
    
 }
 
@@ -215,12 +243,13 @@ svg{
 .set{
     text-align: center;
     /* background-color: rgb(116, 3, 3); */
-    color: black;
+    color: #fff;
     padding: 20px;
 
 }
 
 /* About */
+
 .hero-info{
     margin: 30px 20px;
 }
@@ -281,6 +310,7 @@ svg{
     padding-top: 40px;
     text-align: center;
 }
+  
 
 /* Contact */
 .contact-heading{
@@ -289,13 +319,14 @@ svg{
 }
 
 input{
-    width: 60%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid rgb(66, 6, 6);
     border-radius: 4px;
 }
+
 
 textarea{
     width: 50%;
@@ -313,10 +344,17 @@ label{
 }
 
 .contact-container{
-    margin: 20px 70px;
-    padding: 20px;
+    display: grid;
 }
 
+.form-group{
+    margin: 20px 80px;
+}
+
+.btn{
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
 /* Footer */
 #main-footer{
     text-align: center;
